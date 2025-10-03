@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Todo App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 My Todo App</h1>
+
+    <!-- Form -->
+    <form id="todo-form" class="form">
+      <div class="form-group">
+        <label for="todo-input">Task</label>
+        <input type="text" id="todo-input" placeholder="Add a task...">
+      </div>
+      <div class="form-group">
+        <label for="date-input">Due Date</label>
+        <input type="date" id="date-input">
+      </div>
+      <button type="submit" class="btn-add">Add Task</button>
+    </form>
+
+    <!-- Filter & Delete -->
+    <div class="actions">
+      <div class="form-group">
+        <label for="filter-select">Filter</label>
+        <select id="filter-select">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <button id="delete-all" class="btn danger">Delete All</button>
+    </div>
+
+    <!-- Task Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="todo-list">
+        <tr><td colspan="4" style="text-align:center;">No tasks found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
